@@ -1,5 +1,4 @@
 class AddsToCart
-
   attr_accessor :user, :performance, :count, :success
 
   def initialize(user:, performance:, count:)

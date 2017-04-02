@@ -1,8 +1,13 @@
-example_id                                   | status  | run_time        |
--------------------------------------------- | ------- | --------------- |
-./spec/models/event_spec.rb[1:1]             | pending | 0.00003 seconds |
-./spec/models/performance_spec.rb[1:1]       | pending | 0.00001 seconds |
-./spec/models/ticket_spec.rb[1:1]            | failed  | 0.54151 seconds |
-./spec/models/user_spec.rb[1:1]              | pending | 0.00001 seconds |
-./spec/workflows/adds_to_cart_spec.rb[1:1:1] | passed  | 0.04815 seconds |
-./spec/workflows/adds_to_cart_spec.rb[1:2:1] | passed  | 0.0016 seconds  |
+example_id                                              | status  | run_time        |
+------------------------------------------------------- | ------- | --------------- |
+./spec/features/shopping_cart/adds_to_cart_spec.rb[1:1] | passed  | 1.2 seconds     |
+./spec/models/event_spec.rb[1:1]                        | pending | 0.00001 seconds |
+./spec/models/payment_line_item_spec.rb[1:1]            | pending | 0.00002 seconds |
+./spec/models/payment_spec.rb[1:1]                      | pending | 0.00001 seconds |
+./spec/models/performance_spec.rb[1:1]                  | pending | 0.00001 seconds |
+./spec/models/stripe_token_spec.rb[1:1]                 | passed  | 1.19 seconds    |
+./spec/models/ticket_spec.rb[1:1]                       | passed  | 0.03937 seconds |
+./spec/models/user_spec.rb[1:1]                         | pending | 0.00001 seconds |
+./spec/workflows/adds_to_cart_spec.rb[1:1:1]            | passed  | 0.00206 seconds |
+./spec/workflows/adds_to_cart_spec.rb[1:2:1]            | passed  | 0.0019 seconds  |
+./spec/workflows/purchases_cart_spec.rb[1:1:1]          | passed  | 0.1344 seconds  |
