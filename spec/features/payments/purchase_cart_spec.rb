@@ -16,7 +16,7 @@ describe "purchasing a cart", :js do
   it "can add a purchase to a cart" do
     tickets(:midsummer_bums_1).place_in_cart_for(users(:buyer))
     tickets(:midsummer_bums_2).place_in_cart_for(users(:buyer))
-    login_as(user(:buyer), scope: :user)
+    login_as(users(:buyer), scope: :user)
     visit shopping_cart_path
     fill_in :credit_card_number, with: "4242 4242 4242 4242"
     fill_in :expiration_month, with: "12"

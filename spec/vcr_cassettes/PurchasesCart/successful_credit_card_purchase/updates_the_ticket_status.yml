@@ -7,24 +7,20 @@ http_interactions:
       encoding: UTF-8
       string: card[number]=4242424242424242&card[exp_month]=12&card[exp_year]=2018&card[cvc]=123
     headers:
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
-      - Stripe/v1 RubyBindings/1.58.0
+      - Stripe/v1 RubyBindings/2.1.0
       Authorization:
       - Bearer sk_test_pdqvDlRfWVDT6FMys2wFSpDc
       Content-Type:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
-      - '{"bindings_version":"1.58.0","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
+      - '{"bindings_version":"2.1.0","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
         Szilards-MacBook-Pro.local 16.1.0 Darwin Kernel Version 16.1.0: Wed Oct 19
         20:31:56 PDT 2016; root:xnu-3789.21.4~4/RELEASE_X86_64 x86_64","hostname":"Szilards-MacBook-Pro.local"}'
-      Content-Length:
-      - '82'
-      Host:
-      - api.stripe.com
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
@@ -33,11 +29,11 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 19 Feb 2017 20:06:30 GMT
+      - Sun, 02 Apr 2017 22:08:51 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '781'
+      - '780'
       Connection:
       - keep-alive
       Access-Control-Allow-Credentials:
@@ -51,7 +47,7 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store
       Request-Id:
-      - req_A9Ja6GrKBxlLhz
+      - req_AP525DI3Lvn1mJ
       Stripe-Version:
       - '2017-01-27'
       Strict-Transport-Security:
@@ -60,10 +56,10 @@ http_interactions:
       encoding: UTF-8
       string: |
         {
-          "id": "tok_19p0x0HTEfhIcZGikhrltJd6",
+          "id": "tok_1A4GsRHTEfhIcZGiPwX0nQi2",
           "object": "token",
           "card": {
-            "id": "card_19p0x0HTEfhIcZGi9WdDO2Zg",
+            "id": "card_1A4GsRHTEfhIcZGi8pvD062u",
             "object": "card",
             "address_city": null,
             "address_country": null,
@@ -86,41 +82,37 @@ http_interactions:
             "name": null,
             "tokenization_method": null
           },
-          "client_ip": "95.90.246.109",
-          "created": 1487534790,
+          "client_ip": "95.90.246.86",
+          "created": 1491170931,
           "livemode": false,
           "type": "card",
           "used": false
         }
     http_version: 
-  recorded_at: Sun, 19 Feb 2017 20:06:30 GMT
+  recorded_at: Sun, 02 Apr 2017 22:08:51 GMT
 - request:
     method: post
     uri: https://api.stripe.com/v1/charges
     body:
       encoding: UTF-8
-      string: amount=3000&currency=usd&source=tok_19p0x0HTEfhIcZGikhrltJd6&description=&metadata[reference]=1ef66b107ec8ed5c096d
+      string: amount=3000&currency=usd&source=tok_1A4GsRHTEfhIcZGiPwX0nQi2&description=&metadata[reference]=6657f8b61e241eb4a42e
     headers:
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
-      - Stripe/v1 RubyBindings/1.58.0
+      - Stripe/v1 RubyBindings/2.1.0
       Authorization:
       - Bearer sk_test_pdqvDlRfWVDT6FMys2wFSpDc
       Content-Type:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
-      - '{"bindings_version":"1.58.0","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
+      - '{"bindings_version":"2.1.0","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
         Szilards-MacBook-Pro.local 16.1.0 Darwin Kernel Version 16.1.0: Wed Oct 19
         20:31:56 PDT 2016; root:xnu-3789.21.4~4/RELEASE_X86_64 x86_64","hostname":"Szilards-MacBook-Pro.local"}'
       Idempotency-Key:
-      - 1ef66b107ec8ed5c096d
-      Content-Length:
-      - '114'
-      Host:
-      - api.stripe.com
+      - 6657f8b61e241eb4a42e
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
@@ -129,7 +121,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 19 Feb 2017 20:06:31 GMT
+      - Sun, 02 Apr 2017 22:08:52 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -147,11 +139,11 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store
       Idempotency-Key:
-      - 1ef66b107ec8ed5c096d
+      - 6657f8b61e241eb4a42e
       Original-Request:
-      - req_A9JaBXPX2iwYMS
+      - req_AP52oaHMkDhMaf
       Request-Id:
-      - req_A9JaBXPX2iwYMS
+      - req_AP52oaHMkDhMaf
       Stripe-Version:
       - '2017-01-27'
       Strict-Transport-Security:
@@ -160,15 +152,15 @@ http_interactions:
       encoding: UTF-8
       string: |
         {
-          "id": "ch_19p0x1HTEfhIcZGiaWc6D9WU",
+          "id": "ch_1A4GsSHTEfhIcZGiN4y0f8nk",
           "object": "charge",
           "amount": 3000,
           "amount_refunded": 0,
           "application": null,
           "application_fee": null,
-          "balance_transaction": "txn_19p0x1HTEfhIcZGi7HGO7yPe",
+          "balance_transaction": "txn_1A4GsSHTEfhIcZGi6mc6ExQh",
           "captured": true,
-          "created": 1487534791,
+          "created": 1491170932,
           "currency": "usd",
           "customer": null,
           "description": "",
@@ -180,7 +172,7 @@ http_interactions:
           "invoice": null,
           "livemode": false,
           "metadata": {
-            "reference": "1ef66b107ec8ed5c096d"
+            "reference": "6657f8b61e241eb4a42e"
           },
           "on_behalf_of": null,
           "order": null,
@@ -200,12 +192,12 @@ http_interactions:
             "data": [],
             "has_more": false,
             "total_count": 0,
-            "url": "/v1/charges/ch_19p0x1HTEfhIcZGiaWc6D9WU/refunds"
+            "url": "/v1/charges/ch_1A4GsSHTEfhIcZGiN4y0f8nk/refunds"
           },
           "review": null,
           "shipping": null,
           "source": {
-            "id": "card_19p0x0HTEfhIcZGi9WdDO2Zg",
+            "id": "card_1A4GsRHTEfhIcZGi8pvD062u",
             "object": "card",
             "address_city": null,
             "address_country": null,
@@ -235,5 +227,5 @@ http_interactions:
           "transfer_group": null
         }
     http_version: 
-  recorded_at: Sun, 19 Feb 2017 20:06:31 GMT
+  recorded_at: Sun, 02 Apr 2017 22:08:52 GMT
 recorded_with: VCR 3.0.3
