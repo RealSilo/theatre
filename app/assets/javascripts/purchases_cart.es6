@@ -1,27 +1,6 @@
-$(() => new StripeForm())
-
-class StripeForm {
-  constructor() {
-    this.checkoutForm = new CheckoutForm()
-    this.initSubmitHandler
-  }
-
-  initSubmitHandler() {
-    this.checkoutForm.form().submit((event) => { this.handleSubmit(event) })
-  }
-
-  handleSubmit(event) {
-    event.preventDefault()
-    if (this.checkoutForm.isButtonDisabled()) {
-      return false
-    }
-    this.checkoutForm.disableButton()
-    Stripe.card.createToken(this.checkoutForm.form(), TokenHandler.handle)
-    return false
-  }
-}
-
+// 
 class CheckoutForm {
+
   form() { return $("#payment-form") }
 
   button() { return this.form().find(".btn") }
@@ -30,7 +9,7 @@ class CheckoutForm {
 
   isButtonDisabled() { return this.button().prop("disabled") }
 
-  submit() { this.form().get(0).submit }
+  submit() { this.form().get(0).submit() }
 
   appendHidden(name, value) {
     const field = $("<input>")
@@ -40,7 +19,9 @@ class CheckoutForm {
     this.form().append(field)
   }
 }
+// 
 
+// 
 class TokenHandler {
   static handle(status, response) {
     new TokenHandler(status, response).handle()
@@ -57,3 +38,33 @@ class TokenHandler {
     this.checkoutForm.submit()
   }
 }
+// 
+
+// 
+class StripeForm {
+
+  constructor() {
+    this.checkoutForm = new CheckoutForm()
+    this.initSubmitHandler()
+  }
+
+  initSubmitHandler() {
+    this.checkoutForm.form().submit((event) => { this.handleSubmit(event) })
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    if (this.checkoutForm.isButtonDisabled()) {
+      return false
+    }
+    this.checkoutForm.disableButton()
+    Stripe.card.createToken(this.checkoutForm.form(), TokenHandler.handle)
+    return false
+  }
+}
+// 
+
+
+// 
+$(() => new StripeForm())
+// 

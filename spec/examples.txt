@@ -1,14 +1,14 @@
 example_id                                              | status  | run_time        |
 ------------------------------------------------------- | ------- | --------------- |
-./spec/features/payments/purchase_cart_spec.rb[1:1]     | failed  | 2.29 seconds    |
-./spec/features/shopping_cart/adds_to_cart_spec.rb[1:1] | failed  | 0.45233 seconds |
-./spec/models/event_spec.rb[1:1]                        | pending | 0.00002 seconds |
-./spec/models/payment_line_item_spec.rb[1:1]            | pending | 0.00002 seconds |
-./spec/models/payment_spec.rb[1:1]                      | pending | 0.00003 seconds |
-./spec/models/performance_spec.rb[1:1]                  | pending | 0.00001 seconds |
-./spec/models/stripe_token_spec.rb[1:1]                 | passed  | 0.00705 seconds |
-./spec/models/ticket_spec.rb[1:1]                       | passed  | 0.04156 seconds |
+./spec/features/payments/purchase_cart_spec.rb[1:1]     | passed  | 2.35 seconds    |
+./spec/features/shopping_cart/adds_to_cart_spec.rb[1:1] | passed  | 0.2081 seconds  |
+./spec/models/event_spec.rb[1:1]                        | pending | 0.00001 seconds |
+./spec/models/payment_line_item_spec.rb[1:1]            | pending | 0.00001 seconds |
+./spec/models/payment_spec.rb[1:1]                      | pending | 0.00001 seconds |
+./spec/models/performance_spec.rb[1:1]                  | pending | 0.00002 seconds |
+./spec/models/stripe_token_spec.rb[1:1]                 | passed  | 0.01672 seconds |
+./spec/models/ticket_spec.rb[1:1]                       | passed  | 0.03461 seconds |
 ./spec/models/user_spec.rb[1:1]                         | pending | 0.00001 seconds |
-./spec/workflows/adds_to_cart_spec.rb[1:1:1]            | passed  | 0.00596 seconds |
-./spec/workflows/adds_to_cart_spec.rb[1:2:1]            | passed  | 0.00463 seconds |
-./spec/workflows/purchases_cart_spec.rb[1:1:1]          | passed  | 3.71 seconds    |
+./spec/workflows/adds_to_cart_spec.rb[1:1:1]            | passed  | 0.0025 seconds  |
+./spec/workflows/adds_to_cart_spec.rb[1:2:1]            | passed  | 0.00283 seconds |
+./spec/workflows/purchases_cart_spec.rb[1:1:1]          | passed  | 0.03265 seconds |

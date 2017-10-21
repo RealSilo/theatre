@@ -34,6 +34,8 @@ class StripeCharge
   end
 
   def payment_attributes
+    puts "HAHAHAH"
+    puts "HAHAHAHA"
     success? ? success_attributes : failure_attributes
   end
 
