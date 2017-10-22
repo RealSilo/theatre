@@ -1,14 +1,16 @@
 example_id                                              | status  | run_time        |
 ------------------------------------------------------- | ------- | --------------- |
-./spec/features/payments/purchase_cart_spec.rb[1:1]     | passed  | 2.35 seconds    |
-./spec/features/shopping_cart/adds_to_cart_spec.rb[1:1] | passed  | 0.2081 seconds  |
+./spec/features/payments/purchase_cart_spec.rb[1:1]     | passed  | 5.54 seconds    |
+./spec/features/shopping_cart/adds_to_cart_spec.rb[1:1] | passed  | 0.51624 seconds |
 ./spec/models/event_spec.rb[1:1]                        | pending | 0.00001 seconds |
-./spec/models/payment_line_item_spec.rb[1:1]            | pending | 0.00001 seconds |
-./spec/models/payment_spec.rb[1:1]                      | pending | 0.00001 seconds |
-./spec/models/performance_spec.rb[1:1]                  | pending | 0.00002 seconds |
-./spec/models/stripe_token_spec.rb[1:1]                 | passed  | 0.01672 seconds |
-./spec/models/ticket_spec.rb[1:1]                       | passed  | 0.03461 seconds |
+./spec/models/payment_line_item_spec.rb[1:1]            | pending | 0.00002 seconds |
+./spec/models/payment_spec.rb[1:1]                      | pending | 0.00002 seconds |
+./spec/models/performance_spec.rb[1:1]                  | pending | 0.00001 seconds |
+./spec/models/stripe_token_spec.rb[1:1]                 | passed  | 0.00597 seconds |
+./spec/models/ticket_spec.rb[1:1]                       | passed  | 0.53791 seconds |
 ./spec/models/user_spec.rb[1:1]                         | pending | 0.00001 seconds |
-./spec/workflows/adds_to_cart_spec.rb[1:1:1]            | passed  | 0.0025 seconds  |
-./spec/workflows/adds_to_cart_spec.rb[1:2:1]            | passed  | 0.00283 seconds |
-./spec/workflows/purchases_cart_spec.rb[1:1:1]          | passed  | 0.03265 seconds |
+./spec/workflows/adds_to_cart_spec.rb[1:1:1]            | passed  | 0.00279 seconds |
+./spec/workflows/adds_to_cart_spec.rb[1:2:1]            | passed  | 0.00433 seconds |
+./spec/workflows/executes_paypal_payment_spec.rb[1:1:1] | passed  | 0.00506 seconds |
+./spec/workflows/purchases_cart_paypal_spec.rb[1:1:1]   | passed  | 0.12262 seconds |
+./spec/workflows/purchases_cart_stripe_spec.rb[1:1:1]   | passed  | 0.11204 seconds |

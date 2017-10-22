@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe PurchasesCart do
-  describe 'successful credit card purchase', :vcr do
+describe PurchasesCartStripe do
+  describe 'successful credit card purchase', :vcr, :aggregate_failures do
     let(:reference) { Payment.generate_reference }
     let(:ticket_1) { instance_spy(
       Ticket, status: 'waiting', price: Money.new(1500), id: 1) }
@@ -15,7 +15,7 @@ describe PurchasesCart do
       expiration_month: "12",
       expiration_year: Time.zone.now.year + 1,
       cvc: "123") }
-    let(:workflow) { PurchasesCart.new(
+    let(:workflow) { PurchasesCartStripe.new(
       user: user,
       purchase_amount_cents: 3000,
       stripe_token: token)

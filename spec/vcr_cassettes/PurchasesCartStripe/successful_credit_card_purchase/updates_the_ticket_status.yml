@@ -1,0 +1,235 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.stripe.com/v1/tokens
+    body:
+      encoding: UTF-8
+      string: card[number]=4242424242424242&card[exp_month]=12&card[exp_year]=2018&card[cvc]=123
+    headers:
+      User-Agent:
+      - Stripe/v1 RubyBindings/2.1.0
+      Authorization:
+      - Bearer sk_test_pdqvDlRfWVDT6FMys2wFSpDc
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"2.1.0","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
+        Szilards-MacBook-Pro.local 16.7.0 Darwin Kernel Version 16.7.0: Thu Jun 15
+        17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64 x86_64","hostname":"Szilards-MacBook-Pro.local"}'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 22 Oct 2017 16:27:39 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '781'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-Stripe-Privileged-Session-Required,stripe-manage-version,X-Stripe-External-Auth-Required
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_sAa7GPn1r5Hr2B
+      Stripe-Version:
+      - '2017-01-27'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "tok_1BFmIZHTEfhIcZGinIuk2uzX",
+          "object": "token",
+          "card": {
+            "id": "card_1BFmIZHTEfhIcZGiFPfI76O4",
+            "object": "card",
+            "address_city": null,
+            "address_country": null,
+            "address_line1": null,
+            "address_line1_check": null,
+            "address_line2": null,
+            "address_state": null,
+            "address_zip": null,
+            "address_zip_check": null,
+            "brand": "Visa",
+            "country": "US",
+            "cvc_check": "unchecked",
+            "dynamic_last4": null,
+            "exp_month": 12,
+            "exp_year": 2018,
+            "fingerprint": "mEHbjcYawgiiCu68",
+            "funding": "credit",
+            "last4": "4242",
+            "metadata": {},
+            "name": null,
+            "tokenization_method": null
+          },
+          "client_ip": "67.164.65.121",
+          "created": 1508689659,
+          "livemode": false,
+          "type": "card",
+          "used": false
+        }
+    http_version: 
+  recorded_at: Sun, 22 Oct 2017 16:27:39 GMT
+- request:
+    method: post
+    uri: https://api.stripe.com/v1/charges
+    body:
+      encoding: UTF-8
+      string: amount=3000&currency=usd&source=tok_1BFmIZHTEfhIcZGinIuk2uzX&description=&metadata[reference]=da3b4ac17614e0eaea2f
+    headers:
+      User-Agent:
+      - Stripe/v1 RubyBindings/2.1.0
+      Authorization:
+      - Bearer sk_test_pdqvDlRfWVDT6FMys2wFSpDc
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"2.1.0","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
+        Szilards-MacBook-Pro.local 16.7.0 Darwin Kernel Version 16.7.0: Thu Jun 15
+        17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64 x86_64","hostname":"Szilards-MacBook-Pro.local"}'
+      Idempotency-Key:
+      - da3b4ac17614e0eaea2f
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 22 Oct 2017 16:27:40 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1782'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-Stripe-Privileged-Session-Required,stripe-manage-version,X-Stripe-External-Auth-Required
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Idempotency-Key:
+      - da3b4ac17614e0eaea2f
+      Original-Request:
+      - req_N9AIaBt0pNxzi7
+      Request-Id:
+      - req_N9AIaBt0pNxzi7
+      Stripe-Version:
+      - '2017-01-27'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "ch_1BFmIZHTEfhIcZGiDa22wsCF",
+          "object": "charge",
+          "amount": 3000,
+          "amount_refunded": 0,
+          "application": null,
+          "application_fee": null,
+          "balance_transaction": "txn_1BFmIZHTEfhIcZGiFmwQuBrs",
+          "captured": true,
+          "created": 1508689659,
+          "currency": "usd",
+          "customer": null,
+          "description": "",
+          "destination": null,
+          "dispute": null,
+          "failure_code": null,
+          "failure_message": null,
+          "fraud_details": {},
+          "invoice": null,
+          "livemode": false,
+          "metadata": {
+            "reference": "da3b4ac17614e0eaea2f"
+          },
+          "on_behalf_of": null,
+          "order": null,
+          "outcome": {
+            "network_status": "approved_by_network",
+            "reason": null,
+            "risk_level": "normal",
+            "seller_message": "Payment complete.",
+            "type": "authorized"
+          },
+          "paid": true,
+          "receipt_email": null,
+          "receipt_number": null,
+          "refunded": false,
+          "refunds": {
+            "object": "list",
+            "data": [],
+            "has_more": false,
+            "total_count": 0,
+            "url": "/v1/charges/ch_1BFmIZHTEfhIcZGiDa22wsCF/refunds"
+          },
+          "review": null,
+          "shipping": null,
+          "source": {
+            "id": "card_1BFmIZHTEfhIcZGiFPfI76O4",
+            "object": "card",
+            "address_city": null,
+            "address_country": null,
+            "address_line1": null,
+            "address_line1_check": null,
+            "address_line2": null,
+            "address_state": null,
+            "address_zip": null,
+            "address_zip_check": null,
+            "brand": "Visa",
+            "country": "US",
+            "customer": null,
+            "cvc_check": "pass",
+            "dynamic_last4": null,
+            "exp_month": 12,
+            "exp_year": 2018,
+            "fingerprint": "mEHbjcYawgiiCu68",
+            "funding": "credit",
+            "last4": "4242",
+            "metadata": {},
+            "name": null,
+            "tokenization_method": null
+          },
+          "source_transfer": null,
+          "statement_descriptor": null,
+          "status": "succeeded",
+          "transfer_group": null
+        }
+    http_version: 
+  recorded_at: Sun, 22 Oct 2017 16:27:40 GMT
+recorded_with: VCR 3.0.3

@@ -1,7 +1,7 @@
 class Payment < ApplicationRecord
   include HasReference
 
-  enum status: [:created, :succeeded]
+  enum status: { created: 0, succeeded: 1, pending: 2 }
 
   belongs_to :user, optional: true
   has_many :payment_line_items

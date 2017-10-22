@@ -11,9 +11,7 @@ class AddsToCart
   def run
     Ticket.transaction do
       tickets = performance.unsold_tickets(count)
-      puts 'HIHIHIHHIHHI'
       return unless tickets.size == count
-      puts 'HAHAHAHAAHAHA'
       tickets.each { |ticket| ticket.place_in_cart_for(user) }
       self.success = tickets.all?(&:valid?)
       success

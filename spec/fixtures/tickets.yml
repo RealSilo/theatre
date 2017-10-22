@@ -1,4 +1,4 @@
-<% 10.times do |i| %>
+<% 100.times do |i| %>
   midsummer_bums_<%=i %>:
     performance: midsummer
     status: unsold
